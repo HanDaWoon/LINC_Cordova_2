@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>jQuery Mobile</title>
+		<link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
+		<script src="./js/jquery-1.11.1.min.js"></script>
+		<script src="./js/jquery.mobile-1.4.5.min.js"></script>
+		<style>
+			li {
+				list-style: none;
+			}
+			.picture {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.picture li {
+				float: left;
+				width: 50%;
+			}
+			.picture li a {
+				display: block;
+				margin: 5px;
+				border: 1px;
+			}
+			.picture li img {
+				display: block;
+				width: 50%;
+				height: auto;
+			}
+			.picture li img:hover {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				border: 1px solid #444444;
+			}
+			th,
+			td {
+				border: 1px solid #444444;
+			}
+			#gallery .ui-content {
+				padding: 0;
+			}
+			#gallery .ui-grid-a {
+				margin: 0;
+			}
+			#gallery .ui-block-a,
+			#gallery .ui-block-b {
+				width: 50%;
+				padding: 0;
+			}
+			#gallery .ui-block-a img,
+			#gallery .ui-block-b img {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div data-theme="b">
+			<div data-role="page" id="home">
+				<div data-role="header" data-theme="b">
+					<h1>Samsung SDS</h1>
+				</div>
+				<div data-role="content" style="text-align: center">
+					<img src="Samsung_SDS_logo.svg" width="500px" />
+					<br /><br /><br />
+					<ul data-role="listview" data-inset="true">
+						<li><a href="#intro">소개</a></li>
+						<li><a href="#history">비전</a></li>
+						<li><a href="#gallery">재무</a></li>
+						<li><a href="#ceo">CEO</a></li>
+					</ul>
+				</div>
+				<div data-role="footer" data-position="fixed" data-theme="b">
+					<h1>Samsung SDS</h1>
+				</div>
+			</div>
+
+			<div data-role="page" id="intro" data-theme="b">
+				<div data-role="header" data-theme="b">
+					<a href="#home" data-icon="arrow-l" data-direction="reverse"
+						>처음</a
+					>
+					<h1>소개</h1>
+				</div>
+				<div data-role="content">
+					<div style="text-align: center">
+						<img src="sds2.png" />
+					</div>
+					<div
+						data-role="collapsible-set"
+						data-theme="b"
+						data-content-theme="e"
+					>
+						<div data-role="collapsible" data-collapsed="false">
+							<h3>소개</h3>
+							<p style="font-size: large">
+								데이터 및 컴퓨팅 기술의 리더
+							</p>
+							<p>
+								삼성SDS는 클라우드와 디지털 물류 서비스를
+								제공하는 기업입니다. 기업 맞춤 삼성 클라우드
+								플랫폼을 통해 최적화된 클라우드 환경을 구현하고,
+								38년간 산업별 노하우를 바탕으로 올인원 매니지드
+								서비스를 제공하며, 다양한 성공사례로 검증된 SaaS
+								솔루션을 통해 업무 효율과 고객 서비스 혁신을
+								제고합니다. 복잡한 디지털 전환에 대한 합리적인
+								답을 제시할 수 있는 유일한 파트너, 삼성SDS
+								입니다.
+							</p>
+						</div>
+						<div data-role="collapsible">
+							<h3>주요 비즈니스 영역</h3>
+							<p>
+								삼성SDS는 기업 환경에 최적화된 클라우드 서비스와
+								디지털 물류 플랫폼 기반 물류 서비스를 제공하고
+								있습니다. 삼성 클라우드 플랫폼 (Samsung Cloud
+								Platform, SCP) 의 차별화된 기술력과 다양한 업종
+								및 프로세스에 대한 노하우를 바탕으로
+								Hybrid/Multi 클라우드 서비스, 업무 프로세스별
+								SaaS 도입과 운영, 디지털 기술을 활용하는
+								부분까지 클라우드 기반의 디지털 전환 서비스를
+								제공합니다. 또한, 혁신적인 IT 기술을 결합한
+								디지털 물류 플랫폼(Cello Square)을 통해 수출입
+								물류 서비스를 중심으로 고객의 공급망 계획
+								수립부터 물류 실행까지의 글로벌 통합 물류
+								서비스를 제공합니다.
+							</p>
+						</div>
+						<div data-role="collapsible">
+							<h3>글로벌 Top Tier 삼성SDS</h3>
+							<p>
+								삼성SDS는 지난 38여 년간 대한민국의 IT 혁신을
+								리딩 한다는 자부심과 함께 고객의 니즈 및 시대의
+								변화에 따라 끊임없이 진화해 왔습니다. 그 결과,
+								2021년 Gartner 기준 글로벌 IT 서비스 기업 21위,
+								제조 분야 1위를 기록하였고, 2023년에는 英 브랜드
+								파이낸스(Brand Finance)의 글로벌 IT 서비스 시장
+								브랜드 가치 12위에 선정되는 등 글로벌 Top Tier
+								기업으로 성장했습니다.삼성SDS는 현재 차별화된
+								클라우드 기술력과 다양한 업종 전문성을 바탕으로
+								클라우드 기반 디지털 전환 서비스를 제공하고
+								있으며, Gartner, IDC, Frost & Sullivan 등 글로벌
+								전문평가 기업의 Managed Cloud Services, Cloud
+								Security, AI 분야 등에 등재되며, 고객의 디지털
+								혁신을 지원하는 클라우드 서비스 전문 기업으로서
+								그 역량을 인정받고 있습니다.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div data-role="footer" data-position="fixed" data-theme="b">
+					<h1>Samsung SDS</h1>
+				</div>
+			</div>
+
+			<div data-role="page" id="history" data-theme="b">
+				<div data-role="header" data-position="fixed" data-theme="b">
+					<a href="#home" data-icon="arrow-l" data-direction="reverse"
+						>처음</a
+					>
+					<h1>비전</h1>
+				</div>
+				<div data-role="content">
+					<div class="ui-bar ui-bar-a">SDS 비전</div>
+					<br />
+					<img
+						src="https://image.samsungsds.com/kr/company/vision/abt_vision1_img1_w.png?queryString=20230406010742"
+						alt="vision"
+					/>
+					<p>
+						Data를 가장 잘 이해하고 가장 잘 다룰 수 있는 기업,
+						삼성SDS<br /><br />
+						삼성SDS는 Data 기술과 분석 역량을 바탕으로 제조 현장부터
+						통합 물류, 고객 접점 및 업무 효율까지, Digitalization을
+						통한 차별적 가치를 선도하는 기업입니다.
+					</p>
+				</div>
+				<div data-role="footer" data-position="fixed" data-theme="b">
+					<h1>Samsung SDS</h1>
+				</div>
+			</div>
+
+			<div data-role="page" id="gallery" data-theme="b">
+				<div data-role="header" data-position="fixed" data-theme="b">
+					<a href="#home" data-icon="arrow-l" data-direction="reverse"
+						>처음</a
+					>
+					<h1>재무</h1>
+				</div>
+				<div data-role="content">
+					<table>
+						<caption class="blind">
+							2019년 ~ 2022년 자산 현황 표 입니다. : 과목, 2019년,
+							2020년, 2021년, 2022년
+						</caption>
+						<colgroup>
+							<col style="width: auto" />
+							<col style="width: 15%" />
+							<col style="width: 15%" />
+							<col style="width: 15%" />
+							<col style="width: 15%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">과목</th>
+								<th scope="col">2019년</th>
+								<th scope="col">2020년</th>
+								<th scope="col">2021년</th>
+								<th scope="col">2022년</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td scope="row">
+									<strong class="point">자산총계</strong>
+								</td>
+								<td class="tar">
+									<strong class="point">9,021,236</strong>
+								</td>
+								<td class="tar">
+									<strong class="point">9,154,919</strong>
+								</td>
+								<td class="tar">
+									<strong class="point">10,517,432</strong>
+								</td>
+								<td class="tar">
+									<strong class="point">11,952,425</strong>
+								</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<tr class="sub_total">
+								<th scope="row">I . 유동자산</th>
+								<td class="tar">
+									<strong class="point">6,383,847</strong>
+								</td>
+								<td class="tar">
+									<strong class="point">6,581,153</strong>
+								</td>
+								<td class="tar">
+									<strong class="point">7,575,968</strong>
+								</td>
+								<td class="tar">
+									<strong class="point">8,005,764</strong>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">현금및현금성자산</th>
+								<td class="tar">1,148,183</td>
+								<td class="tar">1,199,286</td>
+								<td class="tar">1,080,888</td>
+								<td class="tar">1,392,134</td>
+							</tr>
+							<tr>
+								<th scope="row">단기금융상품</th>
+								<td class="tar">2,682,694</td>
+								<td class="tar">2,995,006</td>
+								<td class="tar">3,510,296</td>
+								<td class="tar">3,637,376</td>
+							</tr>
+							<tr>
+								<th scope="row">매출채권</th>
+								<td class="tar">1,439,462</td>
+								<td class="tar">1,500,926</td>
+								<td class="tar">1,918,856</td>
+								<td class="tar">1,651,519</td>
+							</tr>
+							<tr>
+								<th scope="row">미수금</th>
+								<td class="tar">793,951</td>
+								<td class="tar">624,546</td>
+								<td class="tar">689,925</td>
+								<td class="tar">899,220</td>
+							</tr>
+							<tr>
+								<th scope="row">선급금</th>
+								<td class="tar">44,618</td>
+								<td class="tar">24,068</td>
+								<td class="tar">68,340</td>
+								<td class="tar">79,164</td>
+							</tr>
+							<tr>
+								<th scope="row">선급비용</th>
+								<td class="tar">71,737</td>
+								<td class="tar">92,966</td>
+								<td class="tar">119,918</td>
+								<td class="tar">127,952</td>
+							</tr>
+							<tr>
+								<th scope="row">재고자산</th>
+								<td class="tar">17,482</td>
+								<td class="tar">25,747</td>
+								<td class="tar">44,302</td>
+								<td class="tar">40,898</td>
+							</tr>
+							<tr>
+								<th scope="row">매각예정자산</th>
+								<td class="tar">61,548</td>
+								<td class="tar">-</td>
+								<td class="tar">-</td>
+								<td class="tar">-</td>
+							</tr>
+							<tr>
+								<th scope="row">기타유동자산</th>
+								<td class="tar">124,172</td>
+								<td class="tar">118,608</td>
+								<td class="tar">143,443</td>
+								<td class="tar">177,501</td>
+							</tr>
+							<tr class="sub_total">
+								<th scope="row">II . 비유동자산</th>
+								<td class="tar">
+									<strong class="point">2,637,389</strong>
+								</td>
+								<td class="tar">
+									<strong class="point">2,573,766</strong>
+								</td>
+								<td class="tar">
+									<strong class="point"> 2,941,464 </strong>
+								</td>
+								<td class="tar">
+									<strong class="point"> 3,946,661 </strong>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									당기손익-공정가치측정금융자산
+								</th>
+								<td class="tar">7,715</td>
+								<td class="tar">12,176</td>
+								<td class="tar">16,617</td>
+								<td class="tar">21,930</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									기타포괄손익-공정가치측정금융자산
+								</th>
+								<td class="tar">24,599</td>
+								<td class="tar">16,656</td>
+								<td class="tar">55,198</td>
+								<td class="tar">12,346</td>
+							</tr>
+							<tr>
+								<th scope="row">관계기업투자주식</th>
+								<td class="tar">99,432</td>
+								<td class="tar">93,938</td>
+								<td class="tar">110,236</td>
+								<td class="tar">118,513</td>
+							</tr>
+							<tr>
+								<th scope="row">유형자산</th>
+								<td class="tar">1,108,004</td>
+								<td class="tar">1,116,313</td>
+								<td class="tar">1,178,634</td>
+								<td class="tar">1,520,437</td>
+							</tr>
+							<tr>
+								<th scope="row">사용권자산</th>
+								<td class="tar">431,233</td>
+								<td class="tar">346,471</td>
+								<td class="tar">439,898</td>
+								<td class="tar">827,595</td>
+							</tr>
+							<tr>
+								<th scope="row">무형자산</th>
+								<td class="tar">789,717</td>
+								<td class="tar">736,725</td>
+								<td class="tar">715,362</td>
+								<td class="tar">712,749</td>
+							</tr>
+							<tr>
+								<th scope="row">보증금</th>
+								<td class="tar">74,546</td>
+								<td class="tar">58,706</td>
+								<td class="tar">81,985</td>
+								<td class="tar">88,180</td>
+							</tr>
+							<tr>
+								<th scope="row">장기선급비용</th>
+								<td class="tar">1,088</td>
+								<td class="tar">868</td>
+								<td class="tar">5,508</td>
+								<td class="tar">7,921</td>
+							</tr>
+							<tr>
+								<th scope="row">이연법인세자산</th>
+								<td class="tar">36,399</td>
+								<td class="tar">30,599</td>
+								<td class="tar">44,462</td>
+								<td class="tar">48,789</td>
+							</tr>
+							<tr>
+								<th scope="row">순확정급여자산</th>
+								<td class="tar">-</td>
+								<td class="tar">75,012</td>
+								<td class="tar">203,102</td>
+								<td class="tar">503,535</td>
+							</tr>
+							<tr>
+								<th scope="row">기타비유동자산</th>
+								<td class="tar">64,656</td>
+								<td class="tar">86,302</td>
+								<td class="tar">90,461</td>
+								<td class="tar">84,666</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div data-role="footer" data-position="fixed" data-theme="b">
+					<h1>삼성 SDS</h1>
+				</div>
+			</div>
+			<div data-role="page" id="ceo" data-theme="b">
+				<div data-role="header" data-position="fixed" data-theme="b">
+					<a href="#home" data-icon="arrow-l" data-direction="reverse"
+						>처음</a
+					>
+					<h1>CEO</h1>
+				</div>
+				<div data-role="content">
+					<img
+						src="https://image.samsungsds.com/kr/company/ceo/ceo.png?queryString=20230330022136"
+						alt="ceo"
+					/>
+					<p>
+						일본 NEC연구원, 고려대학교 전기전자전파공학부 교수를
+						거쳐, 2012년부터 2020년까지 삼성전자 종합기술원에서
+						기술개발에 집중된 경력을 쌓아왔다. 특히, 삼성전자
+						종합기술원 부원장, 원장을 역임하면서, 차별화된 방법론과
+						리더십으로 전자계열사 핵심기술의 연구 및 사업화를
+						이루어, 차세대 성장동력 발굴에 기여했다. 2020년부터
+						삼성SDS 대표이사로서 회사가 보유중인 기술의 고도화와
+						미래 기술 준비를 통하여, 글로벌 기술 중심 회사로의
+						변신과 이를 바탕으로 한 회사의 성장을 이끌고 있다.
+					</p>
+				</div>
+				<div data-role="footer" data-position="fixed" data-theme="b">
+					<h1>삼성 SDS</h1>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
